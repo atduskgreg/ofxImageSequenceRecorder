@@ -54,6 +54,10 @@ public:
         addFrame(cam.getPixelsRef());
     }
     
+    void addFrame(ofVideoPlayer &player){
+        addFrame(player.getPixelsRef());
+    }
+        
     void addFrame(ofPixels imageToSave) {  
 
         
