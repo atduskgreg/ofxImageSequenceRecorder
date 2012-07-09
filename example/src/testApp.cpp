@@ -28,7 +28,7 @@ void testApp::draw(){
     ofSetColor(255);
     
     stringstream c;
-    c << "Recording: " << recording << "\n" << "Queue Size: " << recorder.q.size() << endl;
+    c << "Recording: " << recording << "\nThread running: " << recorder.isThreadRunning() <<  "\nQueue Size: " << recorder.q.size() << "\n\nPress 'r' to toggle recording.\nPress 't' to toggle worker thread." << endl;
     
     ofDrawBitmapString(c.str(), 650, 10);
 }
