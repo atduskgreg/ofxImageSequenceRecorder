@@ -20,10 +20,8 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
         void exit();
     
-    ofxImageSequenceRecorder recorder;
-    
+    ofxImageSequenceRecorder recorder;    
     ofVideoGrabber cam;
-    ofImage currentFrame;
     
     bool recording;
 };

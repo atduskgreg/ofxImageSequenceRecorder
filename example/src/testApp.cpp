@@ -4,9 +4,7 @@
 void testApp::setup(){
     cam.initGrabber(640, 480);
     recording = false;
-     
-    currentFrame.allocate(640, 480, OF_IMAGE_COLOR);
-    
+         
     recorder.setPrefix(ofToDataPath("recording1/frame_")); // this directory must already exist
     recorder.setFormat("jpg"); // png is really slow but high res, bmp is fast but big, jpg is just right
 }
