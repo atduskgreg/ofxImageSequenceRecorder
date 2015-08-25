@@ -11,7 +11,7 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-    cam.grabFrame();
+    cam.update();
 	
 	if (cam.isFrameNew() && recording){
         recorder.addFrame(cam);

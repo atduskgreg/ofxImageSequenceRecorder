@@ -19,9 +19,11 @@ public:
     queue<QueuedImage> q;
     string prefix;
     string format;
+    int numberWidth;
       
     ofxImageSequenceRecorder(){  
         counter=0;  
+        numberWidth=4;
         
     }  
     
@@ -31,6 +33,10 @@ public:
     
     void setFormat(string fmt){
         format = fmt;
+    }
+       
+    void setNumberWidth(int nbwidth){
+        numberWidth = nbwidth;
     }
        
     void threadedFunction() {    
@@ -62,8 +68,9 @@ public:
 
         
         
-        char fileName[100]; 
-        sprintf(fileName,  "%s%.4i.%s" , prefix.c_str(), counter, format.c_str());     
+        //char fileName[100]; 
+        //snprintf(fileName,  "%s%.4i.%s" , prefix.c_str(), counter, format.c_str());     
+        string fileName = prefix + ofToString(counter, numberWidth, '0') + "." + format;
         counter++;   
         
         QueuedImage qImage;
