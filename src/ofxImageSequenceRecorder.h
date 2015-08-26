@@ -35,6 +35,10 @@ public:
         format = fmt;
     }
        
+    void setCounter(int count){
+        counter = count;
+    }
+       
     void setNumberWidth(int nbwidth){
         numberWidth = nbwidth;
     }
